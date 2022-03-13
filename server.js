@@ -1,8 +1,11 @@
 const http= require('http');
 const server=http.createServer((req,res)=>{
     // console.log(req);
-    const{headers,url,method}=req;
-    console.log(headers,url,method);
+    // const{headers,url,method}=req;
+    // console.log(headers,url,method);
+
+    res.setHeader('Content-Type','text/plain')
+    res.write('helloWorld');
     res.end();
 });
 
